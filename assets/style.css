@@ -20,7 +20,7 @@ h1 {
   font-size: 5rem;
   font-weight: bold;
   color: #d4af37; /* gold look */
-  margin: 0 0 10px 0;
+  margin: 0 0 0px 0;
   text-transform: uppercase;
   text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.7);
 }
@@ -49,7 +49,7 @@ p.tagline {
   width: 100%;
   height: auto;
   max-width: 800px;
-  max-height: 65vh; /* a bit tighter fit */
+  max-height: 50vh; /* a bit tighter fit */
   border-radius: 10px; /* round the video edges too */
   border: none;
   display: block;
@@ -69,7 +69,7 @@ p.tagline {
   background: #222;
   border: 2px solid #d4af37;
   color: #f0e6c8;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: bold;
