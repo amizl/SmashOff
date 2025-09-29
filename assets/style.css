@@ -1,0 +1,54 @@
+/* Global body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url("bg.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #eee;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Overlay panel behind video */
+.video-container {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  margin: 20px auto;
+  position: relative;
+  max-width: 90vw;   /* keep inside viewport */
+  max-height: 80vh;  /* prevent overflow */
+}
+
+/* Make the <video> responsive */
+.video-container video {
+  width: 100%;
+  height: auto;
+  max-height: 75vh;  /* never taller than viewport */
+  border-radius: 8px;
+  border: none;
+  display: block;
+}
+
+/* Titles */
+h1 {
+  color: #ff4444;
+  margin-top: 30px;
+}
+
+/* Links */
+a {
+  color: #66ccff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
