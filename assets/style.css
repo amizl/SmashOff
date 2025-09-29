@@ -17,10 +17,10 @@ body {
 
 /* Title */
 h1 {
-  font-size: 5rem;
+  font-size: 4.5rem; /* New! slightly smaller */
   font-weight: bold;
   color: #d4af37; /* gold look */
-  margin: 0 0 0px 0;
+  margin: 10px 0 5px 0; /* New! lowered closer to tagline */
   text-transform: uppercase;
   text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.7);
 }
@@ -28,17 +28,18 @@ h1 {
 /* Subtitle */
 p.tagline {
   font-size: 1.2rem;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0; /* New! tighter spacing */
   color: #f0e6c8;
 }
+
 .video-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
-  max-height: 80vh; /* prevents overflow */
+  margin: 10px auto; /* New! less gap above/below */
+  max-height: 70vh; /* New! keeps it balanced */
 
-  /* New additions */
+  /* Overlay styling */
   background: rgba(0, 0, 0, 0.6); /* semi-transparent dark overlay */
   border-radius: 15px;            /* rounded corners */
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8); /* drop shadow */
@@ -48,28 +49,27 @@ p.tagline {
 .video-container video {
   width: 100%;
   height: auto;
-  max-width: 800px;
-  max-height: 50vh; /* a bit tighter fit */
+  max-width: 850px;  /* New! allow a bit more width */
+  max-height: 60vh;  /* New! taller video */
   border-radius: 10px; /* round the video edges too */
   border: none;
   display: block;
   margin: 0 auto;
 }
 
-
-
 /* Buttons */
 .links {
   display: flex;
   gap: 15px;
   justify-content: center;
+  margin-top: 10px; /* New! pull buttons closer to video */
 }
 
 .links a {
   background: #222;
   border: 2px solid #d4af37;
   color: #f0e6c8;
-  padding: 10px 10px;
+  padding: 10px 20px; /* New! more balanced padding */
   border-radius: 6px;
   font-size: 1rem;
   font-weight: bold;
