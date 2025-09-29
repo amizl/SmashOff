@@ -3,52 +3,75 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  height: 100vh; /* Full viewport height */
   background: url("bg.png") no-repeat center center fixed;
   background-size: cover;
   color: #eee;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Center horizontally */
+  text-align: center;
+  overflow: hidden; /* Prevent scrolling */
 }
 
-/* Overlay panel behind video */
+/* Title */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d4af37; /* gold look */
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Subtitle */
+p.tagline {
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+  color: #f0e6c8;
+}
 .video-container {
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 20px auto;
-  position: relative;
-  max-width: 90vw;   /* keep inside viewport */
-  max-height: 80vh;  /* prevent overflow */
+  max-height: 80vh; /* prevents overflow */
 }
-
-/* Make the <video> responsive */
+/* Video */
 .video-container video {
   width: 100%;
   height: auto;
-  max-height: 75vh;  /* never taller than viewport */
+  max-width: 800px;
+  max-height: 70vh; /* New! keeps it inside screen */
   border-radius: 8px;
   border: none;
   display: block;
+  margin: 0 auto;
 }
 
-/* Titles */
-h1 {
-  color: #ff4444;
-  margin-top: 30px;
+
+/* Buttons */
+.links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
 
-/* Links */
-a {
-  color: #66ccff;
-  text-decoration: none;
+.links a {
+  background: #222;
+  border: 2px solid #d4af37;
+  color: #f0e6c8;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
   font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  transition: 0.2s;
 }
 
-a:hover {
-  text-decoration: underline;
+.links a:hover {
+  background: #d4af37;
+  color: #111;
 }
