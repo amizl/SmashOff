@@ -68,7 +68,8 @@ p.tagline {
   display: flex;
   gap: 15px;
   justify-content: center;
-  margin-top: 10px; /* New! pull buttons closer to video */
+  margin-top: -10px; /* New! pull buttons closer to video */
+  margin-bottom: 20px;
 }
 
 .links a {
