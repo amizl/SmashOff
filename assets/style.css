@@ -153,6 +153,7 @@ p.tagline {
   max-width: 800px;
   margin: 40px auto;
   text-align: center;
+  font-family: 'House of Cards';
 }
 .about h2 {
   font-family: 'House of Cards';
@@ -163,6 +164,7 @@ p.tagline {
 .signup {
   margin: 40px auto;
   text-align: center;
+  font-family: 'House of Cards';
 }
 .signup input {
   padding: 10px;
@@ -173,6 +175,7 @@ p.tagline {
 }
 .signup button {
   background: #d4af37;
+  font-family: 'House of Cards';
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
@@ -224,6 +227,7 @@ footer a:hover {
   .signup input {
     display: block;
     margin: 10px auto;
+    font-family: 'House of Cards';
   }
   .signup button {
     margin-top: 10px;
@@ -232,5 +236,24 @@ footer a:hover {
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'House of Cards';
+  }
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Optional: limit size so it doesn’t get too huge on large screens */
+@media (min-width: 1024px) {
+  .logo {
+    max-width: 600px;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    max-width: 90%;
   }
 }
