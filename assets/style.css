@@ -3,21 +3,42 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh; /* Full viewport height */
+  min-height: 100vh;   /* allow full height page */
   background: url("bg.png") no-repeat center center fixed;
   background-size: cover;
   color: #eee;
+  text-align: center;
+
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center;     /* Center horizontally */
-  text-align: center;
-  overflow: hidden; /* Prevent scrolling */
+  align-items: center;
+
+  overflow-x: hidden;  /* allow vertical scroll */
+  overflow-y: auto;    /* enable scrolling */
 }
 
+/* SVG Logo */
+svg {
+  max-width: 100%;
+  height: auto;
+}
+svg textPath {
+  font-size: 150px; /* default for desktop */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* fills screen height */
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
 
 h1 {
- font-family="Cinzel Decorative";
+  font-family:"Cinzel Decorative";
   font-size: 5rem;
   font-weight: 900;
   color: #d4af37; /* gold color */
@@ -26,38 +47,39 @@ h1 {
   transform: skewX(-5deg); /* slight tilt/warp effect */
   display: inline-block;
 }
+
 /* Subtitle */
 p.tagline {
-  font-family="Cinzel Decorative";
+  font-family:"Cinzel Decorative";
   font-size: 1.2rem;
-  font-weight: 300; /* Bold but lighter than title */
-  margin: 0 0 15px 0;
+  font-weight: 300;
+  margin: 10px 0 20px 0; /* normal spacing */
   color: #f0e6c8;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* subtle shadow for depth */
-  letter-spacing: 1px; /* spacing for readability */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  letter-spacing: 1px;
 }
 
-
+/* Video Section */
 .video-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px auto; /* New! less gap above/below */
-  max-height: 70vh; /* New! keeps it balanced */
+  margin: 10px auto;
+  max-height: 70vh;
 
   /* Overlay styling */
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark overlay */
-  border-radius: 15px;            /* rounded corners */
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8); /* drop shadow */
-  padding: 15px; /* space around the video inside the overlay */
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8);
+  padding: 15px;
 }
 
 .video-container video {
   width: 100%;
   height: auto;
-  max-width: 850px;  /* New! allow a bit more width */
-  max-height: 60vh;  /* New! taller video */
-  border-radius: 10px; /* round the video edges too */
+  max-width: 850px;
+  max-height: 60vh;
+  border-radius: 10px;
   border: none;
   display: block;
   margin: 0 auto;
@@ -68,7 +90,7 @@ p.tagline {
   display: flex;
   gap: 15px;
   justify-content: center;
-  margin-top: -10px; /* New! pull buttons closer to video */
+  margin-top: -10px;
   margin-bottom: 20px;
 }
 
@@ -76,7 +98,7 @@ p.tagline {
   background: #222;
   border: 2px solid #d4af37;
   color: #f0e6c8;
-  padding: 10px 20px; /* New! more balanced padding */
+  padding: 10px 20px;
   border-radius: 6px;
   font-family:"Cinzel Decorative";
   font-size: 1rem;
@@ -85,8 +107,130 @@ p.tagline {
   box-shadow: 0 4px 10px rgba(0,0,0,0.6);
   transition: 0.2s;
 }
-
 .links a:hover {
   background: #d4af37;
   color: #111;
+}
+
+/* Features Section */
+.features {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: left;
+}
+.features h2 {
+  font-family: "Cinzel Decorative";
+  color: #d4af37;
+  text-align: center;
+}
+.features ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+.features li::before {
+  content: "• ";
+  color: #d4af37;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 900px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* About */
+.about {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+.about h2 {
+  font-family: "Cinzel Decorative";
+  color: #d4af37;
+}
+
+/* Signup */
+.signup {
+  margin: 40px auto;
+  text-align: center;
+}
+.signup input {
+  padding: 10px;
+  border: 2px solid #d4af37;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.signup button {
+  background: #d4af37;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.signup button:hover {
+  background: #b8962f;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+}
+footer a {
+  color: #d4af37;
+  text-decoration: none;
+  margin: 0 8px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  svg textPath {
+    font-size: 50px; /* shrink arc logo on tablets */
+  }
+  .video-container video {
+    max-width: 95%;
+    height: auto;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  svg textPath {
+    font-size: 120px;  /* shrink arc logo on phones */
+    letter-spacing: -3px;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .signup input {
+    display: block;
+    margin: 10px auto;
+  }
+  .signup button {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
