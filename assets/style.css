@@ -1,6 +1,6 @@
 /* Global body styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'House of Cards';
   margin: 0;
   padding: 0;
   min-height: 100vh;   /* allow full height page */
@@ -38,7 +38,7 @@ svg textPath {
 }
 
 h1 {
-  font-family:"Cinzel Decorative";
+  font-family: 'House of Cards';
   font-size: 5rem;
   font-weight: 900;
   color: #d4af37; /* gold color */
@@ -50,7 +50,7 @@ h1 {
 
 /* Subtitle */
 p.tagline {
-  font-family:"Cinzel Decorative";
+  font-family: 'House of Cards';
   font-size: 1.2rem;
   font-weight: 300;
   margin: 10px 0 20px 0; /* normal spacing */
@@ -100,7 +100,7 @@ p.tagline {
   color: #f0e6c8;
   padding: 10px 20px;
   border-radius: 6px;
-  font-family:"Cinzel Decorative";
+  font-family: 'House of Cards';
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
@@ -119,7 +119,7 @@ p.tagline {
   text-align: left;
 }
 .features h2 {
-  font-family: "Cinzel Decorative";
+  font-family: 'House of Cards';
   color: #d4af37;
   text-align: center;
 }
@@ -155,7 +155,7 @@ p.tagline {
   text-align: center;
 }
 .about h2 {
-  font-family: "Cinzel Decorative";
+  font-family: 'House of Cards';
   color: #d4af37;
 }
 
