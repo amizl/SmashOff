@@ -1,0 +1,24 @@
+name: Capture Email
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  append-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Append email to file
+        run: |
+          echo "${{ github.event.issue.body }}" >> emails.txt
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add emails.txt
+          git commit -m "Add email from issue"
+          git push
